@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "sflearning",
+  "name": "sfp",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0"
