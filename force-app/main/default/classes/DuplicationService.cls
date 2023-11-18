@@ -1,6 +1,5 @@
 public with sharing class DuplicationService {
     public static void checkAccountDuplication(List<Account> accounts) {
-        System.debug('coming stream' + accounts);
         Set<String> names = new Set<String>();
         Set<String> phoneNumbers = new Set<String>();
         Set<String> accountNumbers = new Set<String>();
@@ -13,7 +12,6 @@ public with sharing class DuplicationService {
 
         // fetch previous records
         List<Account> previousAccounts = AccountSelector.getAccounts(names, accountNumbers, phoneNumbers);
-        System.debug('database: '+ previousAccounts);
         for (Account account : accounts) {
             for (Account previousAccount : previousAccounts) {
                 if (
